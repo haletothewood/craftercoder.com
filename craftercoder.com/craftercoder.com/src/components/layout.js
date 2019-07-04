@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
           {` `}
           by
           {' '}
-          <a href="https://www.github.com/haletothewood">David Halewood</a>
+          <a href="https://davidhalewood.com">David Halewood</a>
         </footer>
       </div>
     </>
