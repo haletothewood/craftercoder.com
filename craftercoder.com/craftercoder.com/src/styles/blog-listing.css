@@ -1,0 +1,14 @@
+div.blog-post-listing {
+    border-bottom: 2px solid #ebdbb2;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+div.blog-post-listing h1 > * {
+  font-size: 1.2rem;
+  text-decoration-line: none;
+}
+div.blog-post-listing h2 {
+  font-size: 0.8rem !important;
+  font-weight: 100 !important;
+}
