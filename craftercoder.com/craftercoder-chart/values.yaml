@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   repository: kubedockerregistry.azurecr.io/craftercoder 
   tag: latest 
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 nameOverride: ""
 fullnameOverride: ""
