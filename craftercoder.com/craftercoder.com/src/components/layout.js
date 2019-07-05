@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
@@ -33,9 +33,7 @@ const Layout = ({ children }) => {
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
           {` `}
-          by
-          {' '}
-          <a href="https://davidhalewood.com">David Halewood</a>
+          by <a href="https://davidhalewood.com">David Halewood</a>
         </footer>
       </div>
     </>

@@ -3,13 +3,13 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 
-import '../styles/blog-listing.css'
+import "../styles/blog-listing.css"
 
 export default function IndexPage({ data }) {
   const { edges: posts } = data.allMarkdownRemark
-  return(
+  return (
     <Layout>
       <SEO title="Home" />
       <div className="blog-posts">
@@ -19,7 +19,9 @@ export default function IndexPage({ data }) {
             return (
               <div className="blog-post-listing" key={post.id}>
                 <h1>
-                  <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+                  <Link to={post.frontmatter.path}>
+                    {post.frontmatter.title}
+                  </Link>
                 </h1>
                 <h2>{post.frontmatter.date}</h2>
                 <p>{post.excerpt}</p>
@@ -47,4 +49,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
