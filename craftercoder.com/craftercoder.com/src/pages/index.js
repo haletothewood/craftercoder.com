@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 import { graphql, Link } from "gatsby"
 
-import "../styles/blog-listing.css"
+import "../styles/blog-listing.scss"
 
 export default function IndexPage({ data }) {
   const { edges: posts } = data.allMarkdownRemark

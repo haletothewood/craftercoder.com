@@ -3,6 +3,8 @@ module.exports = {
     title: `Crafter Coder`,
     description: `A blog site for all things software craftsmanship`,
     author: `@haletothewood`,
+    twitterHandle: "@craftercoder",
+    url: "https://craftercoder.xyz",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -35,6 +37,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    `gatsby-plugin-sass`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

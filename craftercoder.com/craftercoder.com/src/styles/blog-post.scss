@@ -1,0 +1,10 @@
+.blog-post-tags {
+    .blog-post-tag {
+      margin: 0.5em;
+      color: #d79921;
+      text-decoration-line: none;
+      &:hover {
+          color: #855f13
+      }
+    }
+  }
