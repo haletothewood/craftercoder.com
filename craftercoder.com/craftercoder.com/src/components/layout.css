@@ -513,6 +513,7 @@ th {
 }
 li {
   margin-bottom: calc(1.45rem / 2);
+  list-style-type: "\1f449";
 }
 ol li {
   padding-left: 0;
