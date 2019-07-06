@@ -5,9 +5,9 @@ import { graphql, useStaticQuery } from "gatsby"
 import Header from "./header"
 import NavBar from "./navbar"
 
-import "./layout.css"
+import "../styles/layout.scss"
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -53,5 +53,3 @@ const Layout = ({ children }) => {
 Layout.propTypes = {
   children: PropTypes.array,
 }
-
-export default Layout

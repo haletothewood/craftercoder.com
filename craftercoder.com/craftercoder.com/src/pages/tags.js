@@ -9,35 +9,35 @@ import Layout from "../components/layout"
 
 import "../styles/tag-listing.scss"
 
-const Tags = ({
+export default function Tags({
   data: {
     allMarkdownRemark: { group },
     site: {
       siteMetadata: { title },
     },
   },
-}) => (
-  <Layout>
-    <Helmet title={title} />
-    <div>
-      <h1>Tags</h1>
-      <ul>
-        {group.map(tag => (
-          <li key={tag.fieldValue}>
-            <Link
-              className="tag-listing"
-              to={`/tags/${kebabCase(tag.fieldValue)}/`}
-            >
-              {tag.fieldValue} ({tag.totalCount})
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </Layout>
-)
-
-export default Tags
+}) {
+  return (
+    <Layout>
+      <Helmet title={title} />
+      <div>
+        <h1>Tags</h1>
+        <ul>
+          {group.map(tag => (
+            <li key={tag.fieldValue}>
+              <Link
+                className="tag-listing"
+                to={`/tags/${kebabCase(tag.fieldValue)}/`}
+              >
+                {tag.fieldValue} ({tag.totalCount})
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Layout>
+  )
+}
 
 export const pageQuery = graphql`
   query {

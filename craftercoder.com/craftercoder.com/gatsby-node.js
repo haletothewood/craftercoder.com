@@ -65,11 +65,5 @@ exports.createPages = ({ actions, graphql }) => {
         },
       })
     })
-
-    // Make all tags page
-    createPage({
-      path: "/tags",
-      component: tagsPage,
-    })
   })
 }
