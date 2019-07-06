@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import { graphql, useStaticQuery } from "gatsby"
 
 import Header from "./header"
+import NavBar from "./navbar"
+
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -17,7 +19,8 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div id="app">
+      <NavBar pageWrapId={"page-wrap"} outerContainerId={"app"} />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -27,7 +30,14 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <main>{children}</main>
+        <main
+          style={{
+            paddingTop: 120,
+          }}
+          id="page-wrap"
+        >
+          {children}
+        </main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
@@ -36,7 +46,7 @@ const Layout = ({ children }) => {
           by <a href="https://davidhalewood.com">David Halewood</a>
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 
