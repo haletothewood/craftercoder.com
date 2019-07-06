@@ -33,7 +33,7 @@ export default function BlogTemplate({ data }) {
           socialConfig={{
             twitterHandle: data.site.siteMetadata.twitterHandle,
             config: {
-              url: `${data.site.url}${post.frontmatter.path}`,
+              url: `${data.site.siteMetadata.url}${post.frontmatter.path}`,
               title: `${post.frontmatter.title}`,
             },
           }}
