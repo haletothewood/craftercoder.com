@@ -1,10 +1,11 @@
 import React from "react"
+import { Link } from "gatsby"
 import _ from "lodash"
 
 export default function Tag({ tag }) {
   return (
-    <a className="blog-post-tag" href={`/tags/${_.kebabCase(tag)}/`}>
+    <Link className="blog-post-tag" to={`/tags/${_.kebabCase(tag)}/`}>
       {tag}
-    </a>
+    </Link>
   )
 }

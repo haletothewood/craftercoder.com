@@ -1,20 +1,21 @@
 import React from "react"
 import { slide as Menu } from "react-burger-menu"
+import { Link } from "gatsby"
 
 import "../styles/navbar.scss"
 
 export default function NavBar({ props }) {
   return (
     <Menu right width={"100%"} {...props}>
-      <a id="home" className="menu-item" href="/">
+      <Link id="home" className="menu-item" to="/">
         Home
-      </a>
-      <a id="about" className="menu-item" href="/about">
+      </Link>
+      <Link id="about" className="menu-item" to="/about">
         About
-      </a>
-      <a id="about" className="menu-item" href="/tags">
+      </Link>
+      <Link id="about" className="menu-item" to="/tags">
         Tags
-      </a>
+      </Link>
     </Menu>
   )
 }
