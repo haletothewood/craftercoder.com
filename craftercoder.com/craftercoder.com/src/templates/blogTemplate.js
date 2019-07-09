@@ -11,7 +11,7 @@ import "../styles/blog-post.scss"
 export default function BlogTemplate({ data }) {
   const post = data.post
   const renderTags = tags => {
-    return tags.map(tag => <Tag tag={tag} />)
+    return tags.map(tag => <Tag tag={tag} key={tag} />)
   }
 
   return (
