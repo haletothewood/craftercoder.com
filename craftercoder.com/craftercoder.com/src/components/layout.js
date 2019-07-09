@@ -43,12 +43,12 @@ export const PureLayout = ({ site, children }) => {
 
 PureLayout.propTypes = {
   site: PropTypes.object,
-  children: PropTypes.array,
+  children: PropTypes.node,
 }
 
-export const Layout = props => {
+export const Layout = ({ children }) => {
   const site = useSiteMetadata()
-  return <PureLayout {...props} site={site} />
+  return <PureLayout children={children} site={site} />
 }
 
 export default Layout
