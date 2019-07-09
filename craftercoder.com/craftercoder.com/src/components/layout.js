@@ -1,27 +1,18 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql, useStaticQuery } from "gatsby"
 
 import Header from "./header"
 import NavBar from "./navbar"
 
+import { useSiteMetadata } from "../hooks/useSiteMetaData"
+
 import "../styles/layout.scss"
 
-export default function Layout({ children }) {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+export const PureLayout = ({ site, children }) => {
   return (
     <div id="app">
       <NavBar pageWrapId={"page-wrap"} outerContainerId={"app"} />
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={site.title} />
       <div
         style={{
           margin: `0 auto`,
@@ -50,6 +41,14 @@ export default function Layout({ children }) {
   )
 }
 
-Layout.propTypes = {
+PureLayout.propTypes = {
+  site: PropTypes.object,
   children: PropTypes.array,
 }
+
+export const Layout = props => {
+  const site = useSiteMetadata()
+  return <PureLayout {...props} site={site} />
+}
+
+export default Layout
