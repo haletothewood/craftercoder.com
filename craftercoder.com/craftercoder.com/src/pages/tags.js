@@ -9,16 +9,16 @@ import Layout from "../components/layout"
 
 import "../styles/tag-listing.scss"
 
-export default function Tags({
+export const PureTags = ({
   data: {
     allMarkdownRemark: { group },
     site: {
       siteMetadata: { title },
     },
   },
-}) {
+}) => {
   return (
-    <Layout>
+    <>
       <Helmet title={title} />
       <div>
         <h1>Tags</h1>
@@ -35,9 +35,19 @@ export default function Tags({
           ))}
         </ul>
       </div>
+    </>
+  )
+}
+
+export const Tags = props => {
+  return (
+    <Layout>
+      <PureTags {...props} />
     </Layout>
   )
 }
+
+export default Tags
 
 export const pageQuery = graphql`
   query {
