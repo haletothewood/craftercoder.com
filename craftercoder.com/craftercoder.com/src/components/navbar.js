@@ -13,6 +13,9 @@ export default function NavBar({ props }) {
       <Link id="about" className="menu-item" to="/about">
         About
       </Link>
+      <Link id="resources" className="menu-item" to="/resources">
+        Resources
+      </Link>
       <Link id="about" className="menu-item" to="/tags">
         Tags
       </Link>
