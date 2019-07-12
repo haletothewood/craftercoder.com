@@ -1,5 +1,10 @@
 .about-container {
+    display: flex;
+    flex-direction: column;
     img {
         border-radius: 3px;
+    }
+    .about-content{
+        margin-top: 1em;
     }
 }

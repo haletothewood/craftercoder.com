@@ -6,7 +6,7 @@ export const useFixedAboutImage = () => {
       query {
         placeholderImage: file(relativePath: { eq: "me.jpg" }) {
           childImageSharp {
-            fixed(width: 200) {
+            fixed(width: 250) {
               ...GatsbyImageSharpFixed
             }
           }
