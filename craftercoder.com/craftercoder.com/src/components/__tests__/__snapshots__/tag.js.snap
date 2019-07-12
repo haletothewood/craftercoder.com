@@ -2,7 +2,6 @@
 
 exports[`Tag renders correctly 1`] = `
 <a
-  className="blog-post-tag"
   href="/tags/test-tag/"
 >
   Test Tag

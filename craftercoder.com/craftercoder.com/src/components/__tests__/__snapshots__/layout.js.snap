@@ -90,8 +90,21 @@ exports[`Layout renders correctly 1`] = `
           </a>
           <a
             className="bm-item menu-item"
+            href="/resources"
+            id="resources"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
+            tabIndex={-1}
+          >
+            Resources
+          </a>
+          <a
+            className="bm-item menu-item"
             href="/tags"
-            id="about"
+            id="tags"
             style={
               Object {
                 "display": "block",
