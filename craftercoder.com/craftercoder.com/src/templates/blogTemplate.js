@@ -24,7 +24,7 @@ export default function BlogTemplate({ data }) {
       <div className="blog-post-container">
         <Helmet title={`Crafter Coder | ${post.frontmatter.title}`} />
         <div className="blog-post">
-          <h1>{post.frontmatter.title}</h1>
+          <h2>{post.frontmatter.title}</h2>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: post.html }}
