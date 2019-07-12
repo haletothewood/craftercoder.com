@@ -1,6 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { graphql } from "gatsby"
+import { Disqus, CommentCount } from "gatsby-plugin-disqus"
 
 import Layout from "../components/layout"
 import Share from "../components/share"
@@ -10,6 +11,11 @@ import "../styles/blog-post.scss"
 
 export default function BlogTemplate({ data }) {
   const post = data.post
+  const disqusConfig = {
+    url: `${data.site.siteMetadata.url + post.path}`,
+    title: post.title,
+  }
+
   const renderTags = tags => {
     return tags.map((tag, index) => (
       <span className="blog-post-tag" key={tag}>
@@ -23,6 +29,7 @@ export default function BlogTemplate({ data }) {
     <Layout>
       <div className="blog-post-container">
         <Helmet title={`Crafter Coder | ${post.frontmatter.title}`} />
+        <CommentCount config={disqusConfig} placeholder={"..."} />
         <div className="blog-post">
           <h2>{post.frontmatter.title}</h2>
           <div
@@ -43,6 +50,7 @@ export default function BlogTemplate({ data }) {
             },
           }}
         />
+        <Disqus config={disqusConfig} />
       </div>
     </Layout>
   )
