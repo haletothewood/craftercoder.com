@@ -1,4 +1,10 @@
-.blog-post-tags {
+.blog-post-container {
+  .disqus-comment-count {
+    float: right;
+    color: #448488
+  }
+
+  .blog-post-tags {
     .blog-post-tag {
       a {
         margin-left: 0.5em;
@@ -10,3 +16,4 @@
       }
     }
   }
+}
