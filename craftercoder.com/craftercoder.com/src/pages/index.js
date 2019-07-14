@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import "../styles/blog-listing.scss"
+import "prismjs/themes/prism-solarizedlight.css"
+import "../styles/prism-override.scss"
 
 export default function IndexPage({ data }) {
   const { edges: posts } = data.allMarkdownRemark

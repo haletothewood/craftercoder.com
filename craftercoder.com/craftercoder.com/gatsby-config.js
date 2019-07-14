@@ -44,5 +44,23 @@ module.exports = {
         shortname: `craftercoderxyz`,
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: ">",
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              languageExtensions: [],
+            },
+          },
+        ],
+      },
+    },
   ],
 }
