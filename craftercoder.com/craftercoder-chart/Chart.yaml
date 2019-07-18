@@ -1,5 +1,0 @@
-apiVersion: v1
-appVersion: "1.6"
-description: A Helm chart for craftercoder.com 
-name: craftercoder-chart
-version: 0.1.0
