@@ -11,10 +11,14 @@ div.blog-post-listing {
   }
 }
 
-div.blog-post-listing:nth-child(odd) {
+div.blog-post-listing {
   border-bottom: 1px solid #b58900;
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
+}
+
+div.blog-post-listing:last-child {
+  border-bottom: none;
 }
