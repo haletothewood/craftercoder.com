@@ -11,6 +11,7 @@ export default function Header({ siteTitle }) {
         borderBottom: `solid 2px #1d1d1d`,
         marginBottom: `1.45rem`,
         width: "100%",
+        zIndex: 1,
       }}
     >
       <div
