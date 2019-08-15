@@ -92,7 +92,7 @@ public void login(String username, String password) {
 }
 ```
 
-The solution to this can be to simpley use an early return like so:
+The solution to this can be to simply use an early return like so:
 
 ```java
 public void login(String username, String password) {
@@ -114,7 +114,7 @@ This rule seems aimed at avoiding [Primitive Obsession](https://refactoring.guru
 
 >> _"Like most other smells, primitive obsessions are born in moments of weakness. “Just a field for storing some data!” the programmer said. Creating a primitive field is so much easier than making a whole new class, right? And so it was done. Then another field was needed and added in the same way. Lo and behold, the class became huge and unwieldy._
 
-The recommended remedy to this code smell is actually to apply this rule. Use small objects to encapsulate the data being held in the primitive types. Even better, try moving the behaviour associated with this data to the object as well. This will help your code be more understandable and better organized. Operations on particular data are in the same place improving maintainability and reduce the cost of future change.
+The recommended remedy to this code smell is actually to apply this rule. Use small objects to encapsulate the data being held in the primitive types. Even better, try moving the behaviour associated with this data to the object as well. This will help your code be more understandable and better organised. Operations on particular data are in the same place improving maintainability and reduce the cost of future change.
 
 For example, in Java, use `Money` instead of a `double` for currency, or `Hour` instead of `LocalDate` for time.
 
@@ -129,7 +129,7 @@ Or put another way, an object should not be reaching through another instance of
 
 #### Rule 5: Don't abbreviate.
 
-This rule just makes good sense for most (I'd argue all) object oriented languages. It makes your code more readable and therefore easier to maintain.
+This rule just make good sense for most (I'd argue all) object oriented languages. It makes your code more readable and therefore easier to maintain.
 
 I'd question any reason I was given to accept abbreviated variable or method names. If you say you're sick of writing the same variable name over and over, I'd say you probably have some duplication to remove. If it's too long, say for a method name, then maybe it's trying to do too much! If you're struggling with naming then maybe there's more going on that is causing problems, take a step back and see if you can refactor away the need for that name.
 
