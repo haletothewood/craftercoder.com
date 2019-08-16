@@ -272,6 +272,7 @@ exports[`Layout renders correctly 1`] = `
         "marginBottom": "1.45rem",
         "position": "fixed",
         "width": "100%",
+        "zIndex": 1,
       }
     }
   >
