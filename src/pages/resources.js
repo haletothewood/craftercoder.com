@@ -3,8 +3,6 @@ import React from "react"
 import SEO from "../components/seo"
 import withLayout from "../utils/withLayout"
 
-import "../styles/resources.scss"
-
 export const AboutPage = () => (
   <>
     <SEO title="Resources" />
