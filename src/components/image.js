@@ -9,5 +9,5 @@ export const Image = ({ image = useFixedPlaceholderImage() }) => {
 }
 
 export const AboutImage = ({ image = useFixedAboutImage() }) => {
-  return <Img fixed={image} />
+  return <Img fluid={image} />
 }
