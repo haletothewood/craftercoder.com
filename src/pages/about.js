@@ -11,7 +11,9 @@ export const AboutPage = () => (
     <SEO title="About" />
     <div className="about-container">
       <h1>About</h1>
-      <Image />
+      <div className="image-container">
+        <Image />
+      </div>
       <div className="about-content">
         Crafter Coder is a place for me, a software craftsman apprentice at{" "}
         <a href="https://codurance.com">Codurance</a>, to share my thoughts,
