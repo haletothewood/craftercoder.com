@@ -4,15 +4,15 @@ export const useFixedAboutImage = () => {
   const { placeholderImage } = useStaticQuery(
     graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "me.jpg" }) {
+        placeholderImage: file(relativePath: { eq: "me.png" }) {
           childImageSharp {
-            fixed(width: 250) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 500, quality: 100) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
       }
     `
   )
-  return placeholderImage.childImageSharp.fixed
+  return placeholderImage.childImageSharp.fluid
 }
