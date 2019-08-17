@@ -338,7 +338,7 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
+  margin-left: 1rem;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -514,8 +514,12 @@ th {
   font-weight: bold;
 }
 li {
+  list-style: none;
   margin-bottom: calc(1.45rem / 2);
-  list-style-type: "\1f449";
+  &:before {
+    // 👉
+    content: "\1F449\a0";
+  }
 }
 ol li {
   padding-left: 0;
