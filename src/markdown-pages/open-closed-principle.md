@@ -132,7 +132,7 @@ It is **open to extension** in that it can accept collections of an ever increas
 
 Now this is a very simplistic example and this prinicple was more defined within a module or package scope. For an excellent take on how OCP applies on a higher level I recommend reading [this post](https://blog.cleancoder.com/uncle-bob/2014/05/12/TheOpenClosedPrinciple.html) from Uncle Bob.
 
-Next up from me is the Liskov Substituion Principle.
+Next up from me is the Liskov Substitution Principle.
 
 
 
