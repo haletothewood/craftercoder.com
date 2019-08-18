@@ -112,7 +112,7 @@ Alternatively you can makes use of the features of Object Oriented programming a
 
 This rule seems aimed at avoiding [Primitive Obsession](https://refactoring.guru/smells/primitive-obsession), a common code smell. As explained by the excellent [refactoring.guru](https://refactoring.guru/):
 
->> _"Like most other smells, primitive obsessions are born in moments of weakness. “Just a field for storing some data!” the programmer said. Creating a primitive field is so much easier than making a whole new class, right? And so it was done. Then another field was needed and added in the same way. Lo and behold, the class became huge and unwieldy._
+> _"Like most other smells, primitive obsessions are born in moments of weakness. “Just a field for storing some data!” the programmer said. Creating a primitive field is so much easier than making a whole new class, right? And so it was done. Then another field was needed and added in the same way. Lo and behold, the class became huge and unwieldy._
 
 The recommended remedy to this code smell is actually to apply this rule. Use small objects to encapsulate the data being held in the primitive types. Even better, try moving the behaviour associated with this data to the object as well. This will help your code be more understandable and better organised. Operations on particular data are in the same place improving maintainability and reduce the cost of future change.
 
@@ -122,7 +122,7 @@ For example, in Java, use `Money` instead of a `double` for currency, or `Hour` 
 
 This rule is reflecting the [Law of Demeter](https://en.wikipedia.org/wiki/Law_of_Demeter) which can be succinctly summarized as: 
 
->>  _"Each unit should only talk to its friends; don't talk to strangers"._
+>  _"Each unit should only talk to its friends; don't talk to strangers"._
 
 Or put another way, an object should not be reaching through another instance of an object to talk to yet another object. __Use only one dot per line__.
 
