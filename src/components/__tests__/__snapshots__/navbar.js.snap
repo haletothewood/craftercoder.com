@@ -87,6 +87,19 @@ exports[`NavBar renders correctly 1`] = `
         </a>
         <a
           className="bm-item menu-item"
+          href="/posts"
+          id="posts"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+          tabIndex={-1}
+        >
+          Posts
+        </a>
+        <a
+          className="bm-item menu-item"
           href="/resources"
           id="resources"
           style={
