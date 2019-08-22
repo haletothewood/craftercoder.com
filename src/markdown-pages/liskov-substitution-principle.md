@@ -17,7 +17,11 @@ Or in duck terms:
 
 > _If it looks like a_ 🦆_, quacks like a_ 🦆 _but needs batteries - you probably have the wrong level of abstraction_
 
-Let's look at an example, in code, of a violation of the Liskov Principle amd potential fix. Say we have an application that was built to automate the refueling of petrol cars. This was later extended to also cater for recharging electric cars. The developer decided to use the Open/Closed Principle (OCP - check out my previous post if you haven't already) to "close" the code to the addition of new types of cars. To do this, the following abstract Car base class was created:
+This dictates that, for your code to adhere to LSP, all subclasses<sup>*</sup> must be completely interchangeable with their parent class.
+
+Let's look at an example (in Java) of a violation of the Liskov Principle and potential fix.
+
+Say we have an application that was built to automate the refueling of petrol cars. This was later extended to also cater for recharging electric cars. The developer decided to use the Open/Closed Principle (OCP - check out my previous post if you haven't already) to "close" the code to the addition of new types of cars. To do this, the following abstract Car base class was created:
 
 ```java
 public abstract class Car {
