@@ -117,5 +117,4 @@ There is more to discuss here, specifically the pre and post conditions, as well
 
 Next up is the Interface Segregation Princicple.
 
-
-
+<sup>*</sup> - Here subclass is used to mean any class that extends another class.
