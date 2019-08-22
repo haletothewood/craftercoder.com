@@ -30,6 +30,9 @@
   height: 30px;
   right: 20px;
   top: 28px;
+  button {
+    outline: none;
+  }
 }
 
 /* Color/shape of burger icon bars */
@@ -44,6 +47,9 @@
   height: 30px !important;
   right: 30px !important;
   top: 20px !important;
+  button {
+    outline: none;
+  }
 }
 
 /* Color/shape of close button cross */
