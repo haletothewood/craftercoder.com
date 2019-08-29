@@ -1,7 +1,7 @@
 ---
 path: "/blog/single-responsibility-principle"
 date: "2019-08-17"
-title: "⚡ Single Responsibility Principle ⚡"
+title: "⚡ Single Responsibility Principle"
 tags: ["SOLID", "Uncle Bob", "Lightning Posts"]
 ---
 

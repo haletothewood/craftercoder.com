@@ -1,7 +1,7 @@
 ---
 path: "/blog/dependency-inversion-principle"
 date: "2019-08-26"
-title: "⚡ Dependency Inversion Principle ⚡"
+title: "⚡ Dependency Inversion Principle"
 tags: ["SOLID", "Uncle Bob", "Lightning Posts"]
 ---
 
