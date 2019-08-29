@@ -1,7 +1,7 @@
 ---
 path: "/blog/open-closed-principle"
 date: "2019-08-18"
-title: "⚡ Open/Closed Principle ⚡"
+title: "⚡ Open/Closed Principle"
 tags: ["SOLID", "Uncle Bob", "Lightning Posts"]
 ---
 

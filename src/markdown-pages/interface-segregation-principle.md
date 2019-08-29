@@ -1,7 +1,7 @@
 ---
 path: "/blog/interface-segregation-principle"
 date: "2019-08-22"
-title: "⚡ Interface Segregation Principle ⚡"
+title: "⚡ Interface Segregation Principle"
 tags: ["SOLID", "Uncle Bob", "Lightning Posts"]
 ---
 

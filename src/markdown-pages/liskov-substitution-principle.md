@@ -1,7 +1,7 @@
 ---
 path: "/blog/liskov-substitution-principle"
 date: "2019-08-20"
-title: "⚡ Liskov Substitution Principle ⚡"
+title: "⚡ Liskov Substitution Principle"
 tags: ["SOLID", "Uncle Bob", "Lightning Posts"]
 ---
 
