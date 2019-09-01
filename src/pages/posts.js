@@ -20,8 +20,7 @@ export const PurePosts = ({ data }) => {
             <li key={post.node.frontmatter.title}>
               <Link className="tag-listing" to={post.node.frontmatter.path}>
                 {post.node.frontmatter.title}
-              </Link>{" "}
-              <sub>{post.node.frontmatter.date}</sub>
+              </Link>
             </li>
           ))}
         </ul>
