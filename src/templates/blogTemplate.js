@@ -29,11 +29,14 @@ export default function BlogTemplate({ data }) {
     <Layout>
       <div className="blog-post-container">
         <Helmet title={`Crafter Coder | ${post.frontmatter.title}`} />
-        <Link to={`${post.frontmatter.path}#disqus`}>
-          <CommentCount config={disqusConfig} placeholder={"..."} />
-        </Link>
         <div className="blog-post">
-          <h2>{post.frontmatter.title}</h2>
+          <div className="blog-post-title">
+            <h2>{post.frontmatter.title}</h2>
+            <div className="blog-post-date">{post.frontmatter.date}</div>
+            <Link to={`${post.frontmatter.path}#disqus`}>
+              <CommentCount config={disqusConfig} placeholder={"..."} />
+            </Link>
+          </div>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: post.html }}
