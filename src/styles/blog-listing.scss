@@ -1,5 +1,13 @@
 
 div.blog-post-listing {
+
+  .blog-post-title, .blog-post-date {
+    text-align: center;
+  }
+
+  .blog-post-title {
+    margin-bottom: 0.25em;
+  }
   h1 > * {
     font-size: 1.2rem;
     text-decoration-line: none;
