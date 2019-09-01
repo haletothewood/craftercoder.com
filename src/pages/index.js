@@ -1,10 +1,10 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Post from "../components/post"
 
-import "../styles/blog-listing.scss"
 import "prismjs/themes/prism-solarizedlight.css"
 import "../styles/prism-override.scss"
 
@@ -17,17 +17,7 @@ export default function IndexPage({ data }) {
         {posts
           .filter(post => post.node.frontmatter.title.length > 0)
           .map(({ node: post }) => {
-            return (
-              <div className="blog-post-listing" key={post.id}>
-                <h1>
-                  <Link to={post.frontmatter.path}>
-                    {post.frontmatter.title}
-                  </Link>
-                </h1>
-                <h2>{post.frontmatter.date}</h2>
-                <p>{post.excerpt}</p>
-              </div>
-            )
+            return <Post post={post} />
           })}
       </div>
     </Layout>
