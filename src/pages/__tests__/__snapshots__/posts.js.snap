@@ -13,10 +13,6 @@ exports[`Posts renders correctly 1`] = `
       >
         Title
       </a>
-       
-      <sub>
-        01/01/2019
-      </sub>
     </li>
   </ul>
 </div>
