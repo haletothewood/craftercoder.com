@@ -1,13 +1,19 @@
 
 div.blog-post-listing {
 
-  .blog-post-title, .blog-post-date {
+  .blog-post-title, .blog-post-date, .blog-post-reading-time {
     text-align: center;
   }
 
-  .blog-post-title {
+  .blog-post-title, .blog-post-date {
     margin-bottom: 0.25em;
   }
+
+  .blog-post-reading-time {
+    margin-bottom: 1.5em;
+    color: #689d6a;
+  }
+
   h1 > * {
     font-size: 1.2rem;
     text-decoration-line: none;
