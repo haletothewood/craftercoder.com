@@ -33,6 +33,9 @@ export default function BlogTemplate({ data }) {
           <div className="blog-post-title">
             <h2>{post.frontmatter.title}</h2>
             <div className="blog-post-date">{post.frontmatter.date}</div>
+            <div className="blog-post-reading-time">
+              {post.fields.readingTime.text}
+            </div>
             <Link to={`${post.frontmatter.path}#disqus`}>
               <CommentCount config={disqusConfig} placeholder={"..."} />
             </Link>
@@ -78,6 +81,11 @@ export const pageQuery = graphql`
         path
         title
         tags
+      }
+      fields {
+        readingTime {
+          text
+        }
       }
     }
   }
