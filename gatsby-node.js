@@ -23,6 +23,11 @@ exports.createPages = ({ actions, graphql }) => {
               title
               tags
             }
+            fields {
+              readingTime {
+                text
+              }
+            }
           }
         }
       }
