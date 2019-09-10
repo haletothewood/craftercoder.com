@@ -130,4 +130,4 @@ It makes it easier to design and implement new features and write code. It means
 
 Thanks for reading! As always I welcome comments or challenges to my interpretation of the topic.
 
-<sup>*</sup> sometimes referred to as loose coupling and tight coupling
+<sup>* _sometimes referred to as loose coupling and tight coupling_ </sup>
