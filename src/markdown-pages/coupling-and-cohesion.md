@@ -27,7 +27,7 @@ All of this, in case you were wondering, is bad. Bad for you, bad for your clien
 
 By reducing the coupling, or better yet, designing your code from the get-go with coupling in mind, you can easily make changes to modules without fear of breaking code elsewhere. It's important to note however that there is no way to remove coupling altogether, only to limit the impact any changes have. **Low coupling** also makes it easier to write, test and maintain code. This is due to modules exisiting in isolation and without an interdependentness on one another.
 
-Interfaces are a powerful tool in the object-oriented paradigm. They can be used to promote low coupling, in my opinion, and according to the [Gang of Four](https://en.wikipedia.org/wiki/Design_Patterns) are what we should programming to.
+Interfaces are a powerful tool in the object-oriented paradigm. They can be used to promote low coupling, in my opinion, and according to the [Gang of Four](https://en.wikipedia.org/wiki/Design_Patterns) are what we should working towards.
 
 Let's look at an example: 
 
@@ -37,18 +37,27 @@ public class Example {
 
     public void doAThing() {
         thing = new Thing();
-        thing.doSomething();
+        thing.getAnotherThing().doSomething();
     }
 }
 
 public class Thing {
+    public AnotherThing thing;
+
+    public AnotherThing getAnotherThing() {
+        return thing;
+    }
+    //code
+}
+
+public class AnotherThing {
     public void doSomething() {
         //code
     }
 }
 ```
 
-This class is highly coupled to the `ConcreteThing`. We cannot make changes in the behavior of the `doSomething()` method without it affecting directly this class. You may also recognize that it violates the O in SOLID, the Open/Closed Principle. It is not open to extension or closed to modification. We can solve both issues by using an interface.
+This class is highly coupled to the `Thing` and `AnotherThing`. We cannot make changes in the behavior of the `doSomething()` method without it affecting directly this class. You may also recognize that it violates the O in SOLID, the Open/Closed Principle. It is not open to extension or closed to modification. We can solve both issues by using an interface.
 
 Like so:
 
@@ -76,7 +85,7 @@ public class ConcreteThing implements Thing {
 }
 ```
 
-Now, if I need to change the expected behaviour I can simply create another concrete implementation. The code is now loosley coupled, easier to test and simple to extend.
+Now, if I need to change the expected behaviour I can simply create another concrete implementation. The code is now loosley coupled, easier to test and simple to extend. Of course, it's not always the better approach. You should start with the first and only when you understand the requirements for change move towards the second example ([YAGNI](https://martinfowler.com/bliki/Yagni.html)).
 
 #### Cohesion
 
@@ -92,29 +101,29 @@ Take this example:
 
 ```Java
 public class Example {
-    private Thing a;
-    private AnotherThing b;
-    private YetAnotherThing c;
+    private EmailThing a;
+    private DatabaseThing b;
+    private UserThing c;
 
  //code
 
-    public void doAThing() {
+    public void doAnEmailThing() {
         a.doSomething();
     }
 
-    public void doAnotherThing() {
+    public void doADatabaseThing() {
         b.doSomething();
     }
 
-    public void doYetAnotherThing() {
+    public void doaUserThing() {
         c.doSomething();
     }
 }
 ```
 
-Here we have what is called `coincidental cohesion`. The only connection between the parts of this module is that they are part of this module. An example could be like a helper class, or Utility where elements are completely independent of each other.
+Here we have what is called coincidental cohesion. The only connection between the parts of this module is that they are part of this module. Each method is doing something completely different and so none are strongly related to another. It's possible they are from a roughly similar domain but the only relationship between the parts of this module is that they are part of this module.
 
-This is clearly the lowest of low cohesion and is a very simple example. However, it's not out of the ordinary to see varying degrees of this in the wild. What do you think is the better alternative to this? For me, each of these fields probably belong in their own module. 
+This is the lowest of low cohesion and is a very simple example. However, it's not out of the ordinary to see varying degrees of this in the wild. What do you think is the better alternative to this? For me, each of these methods belong in their own module. 
 
 To borrow from [The Pragmatic Programmer](https://www.amazon.co.uk/Pragmatic-Programmer-Andrew-Hunt/dp/020161622X/ref=sr_1_1?adgrpid=52230164094&gclid=EAIaIQobChMIw5TRxrTG5AIVDLDtCh1rIQHtEAAYASAAEgJFHPD_BwE&hvadid=259088862423&hvdev=c&hvlocphy=9045999&hvnetw=g&hvpos=1t1&hvqmt=e&hvrand=6164697362152308605&hvtargid=kwd-302199567278&hydadcr=17611_1817757&keywords=the+pragmatic+programmer&qid=1568123848&s=gateway&sr=8-1):
 
