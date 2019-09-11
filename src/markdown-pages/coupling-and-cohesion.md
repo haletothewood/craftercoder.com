@@ -133,9 +133,9 @@ A highly cohesive module will have elements that are directly related to the sin
 
 #### In Summary
 
-Suffice it to say these two properties are hugely important and are vital to understand when designing good software. The two often work hand in hand. A codebase that is highly cohesive is also likely to be low in coupling and vice versa. Not always but one is a good sign the other may be present. Writing code that is both means that it will be maintainable which is an invaluable quality for programmers and clients alike. 
+Suffice it to say these two properties are hugely important and are vital to understand when designing good software. The two often work hand in hand. A codebase that is highly cohesive is also likely to be low in coupling and vice versa. Not always but one is a good sign the other may be present. Writing code that is both highly cohesive and low in coupling means that it will be much more maintainable, an invaluable quality for programmers and clients alike. 
 
-It makes it easier to design and implement new features and write code. It means we can add value quicker and more easily. Debugging becomes a joy and not a chore (ok, I may be pushing it with that one) and the risk of adopting change is dramatically reduced.
+Keeping them in mind and working towards these principles will make it easier to design and implement new features and write code. It means we can add value quicker and more easily. Debugging becomes a joy and not a chore (ok, I may be pushing it with that one) and the risk of adopting change is dramatically reduced.
 
 Thanks for reading! As always I welcome comments or challenges to my interpretation of the topic.
 
