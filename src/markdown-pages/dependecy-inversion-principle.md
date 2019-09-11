@@ -1,8 +1,8 @@
 ---
 path: "/blog/dependency-inversion-principle"
 date: "2019-08-26"
-title: "⚡ Dependency Inversion Principle"
-tags: ["SOLID", "Uncle Bob", "Lightning Posts"]
+title: "Dependency Inversion Principle"
+tags: ["SOLID", "Uncle Bob", "Design Principles", "Software Engineering"]
 ---
 
 This blog entry is the fifth and final in a series of lightning talk style posts about each of the [SOLID Design Principles](https://en.wikipedia.org/wiki/SOLID) for object-oriented software.

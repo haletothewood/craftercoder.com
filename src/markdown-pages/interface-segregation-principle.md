@@ -1,8 +1,8 @@
 ---
 path: "/blog/interface-segregation-principle"
 date: "2019-08-22"
-title: "⚡ Interface Segregation Principle"
-tags: ["SOLID", "Uncle Bob", "Lightning Posts"]
+title: "Interface Segregation Principle"
+tags: ["SOLID", "Uncle Bob", "Design Principles", "Software Engineering"]
 ---
 
 This blog entry is the fourth in a series of lightning talk style posts about each of the [SOLID Design Principles](https://en.wikipedia.org/wiki/SOLID) for object-oriented software.
