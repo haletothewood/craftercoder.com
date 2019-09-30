@@ -79,9 +79,9 @@ So let's break this down into each section:
 
 #### Jobs
 
-* `version` : The target version of CircleCI.
-* `jobs` : Where the jobs that are to be scheduled are defined.
-* `build`/`test` : The name of our jobs to be defined. These are then referred to in the `workflows` section.
+* `version`: The target version of CircleCI.
+* `jobs`: Where the jobs that are to be scheduled are defined.
+* `build`/`test`: The name of our jobs to be defined. These are then referred to in the `workflows` section.
 * `docker` : The instance of the environment where are commands will be run
 * `working-directory` : The directory where your commands will run. Default is `~/project`, shown here as an example. 
 * `steps` : These steps will run in sequence for the defined job.
@@ -94,7 +94,7 @@ So let's break this down into each section:
 
 * `workflows` : This describes the flow of the jobs that have been defined in the `jobs` section.
 * `build_and_test` : The name of our workflow.
-* `jobs` : The jobs to be run, in sequence.
+* `jobs` : The name of the jobs to be run.
 * `requires` : This allows us to ensure the `build` job is completed before the `test` job is triggered. Otherwise, they would run in parallel 
 
 An example of how this may look in your jobs output in CircleCI. You can view this by clicking on a specific job under 'Jobs -> account -> project'.
