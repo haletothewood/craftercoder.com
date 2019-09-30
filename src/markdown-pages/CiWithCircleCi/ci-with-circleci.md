@@ -45,7 +45,7 @@ jobs:
   build:
     docker:
       # specify the same version of your environment in production:
-      - image: circleci/node:lts-slim
+      - image: circleci/node:10.16.3
     working_directory: ~/project
     steps:
       - checkout
@@ -61,7 +61,7 @@ jobs:
           key: node-dependencies-{{ checksum "yarn.lock" }}
   test:
     docker:
-      - image: circleci/node:lts-slim
+      - image: circleci/node:10.16.3
       - run:
           name: Run Tests
           command: yarn test
@@ -110,7 +110,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node
+      - image: circleci/node:10.16.3
     working_directory: ~/project
     steps:
       - setup_remote_docker
@@ -120,7 +120,7 @@ jobs:
           command: docker build -t crafter-coder/example-app:latest .
   test:
     docker:
-      - image: circleci/node:lts-slim
+      - image: circleci/node:10.16.3
       - run:
           name: Run Tests
           command: docker run crafter-coder/example-app:latest yarn test
