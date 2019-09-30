@@ -82,8 +82,8 @@ So let's break this down into each section:
 * `version`: The target version of CircleCI.
 * `jobs`: Where the jobs that are to be scheduled are defined.
 * `build`/`test`: The name of our jobs to be defined. These are then referred to in the `workflows` section.
-* `docker` : The instance of the environment where are commands will be run
-* `working-directory` : The directory where your commands will run. Default is `~/project`, shown here as an example. 
+* `docker` : The instance of the environment where the commands will be run
+* `working-directory` : The directory where the commands will run. Default is `~/project`, shown here as an example. 
 * `steps` : These steps will run in sequence for the defined job.
 * `checkout` : Fetches the source code from the repo. By default, source code is checked out to the path specified by `working_directory`
 * `restore-cache` : This will check the file defined in the key for any changes and skip the following step if none are found.
