@@ -22,27 +22,6 @@ save_repo: &save_repo
     paths:
       - *working_directory
 
-before_script: &before_script
-  <<: *node_config
-  steps:
-    - checkout
-    - attach_workspace:
-        at: *working_directory
-    - run:
-        name: Install Dependencies
-        command: npm ci
-    - *save_repo
-
-test: &test
-  <<: *node_config
-  steps:
-    - *restore_repo
-    - attach_workspace:
-        at: *working_directory
-    - run:
-        name: Test
-        command: npm test
-
 build: &build
   <<: *node_config
   steps:
@@ -53,23 +32,35 @@ build: &build
         name: Build
         command: npm run build
 
-release: &release
-  <<: *node_config
-  steps:
-    - *build
-    - run:
-        name: Netlify Deploy
-        command: npm run release
-
 jobs:
   before_script:
-    <<: *before_script
+    <<: *node_config
+    steps:
+      - checkout
+      - attach_workspace:
+          at: *working_directory
+      - run:
+          name: Install Dependencies
+          command: npm ci
+      - *save_repo
 
   test:
-    <<: *test
+    <<: *node_config
+    steps:
+      - *restore_repo
+      - attach_workspace:
+          at: *working_directory
+      - run:
+          name: Test
+          command: npm test
 
   release:
-    <<: *release
+    <<: *node_config
+    steps:
+      - *build
+      - run:
+          name: Netlify Deploy
+          command: npm run release
 
 workflows:
   version: 2
