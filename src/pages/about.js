@@ -15,7 +15,7 @@ export const AboutPage = () => (
         <Image />
       </div>
       <div className="about-content">
-        Crafter Coder is a place for me, a software craftsman apprentice at{" "}
+        Crafter Coder is a place for me, a Software Craftsperson at{" "}
         <a href="https://codurance.com">Codurance</a>, to share my thoughts,
         learnings and resources whilst on my journey.
       </div>
