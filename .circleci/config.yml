@@ -1,7 +1,7 @@
 version: 2
 
 references:
-node_image: &node_image node:7.10
+node_image: &node_image node:10
 
 working_directory: &working_directory ~/project
 
