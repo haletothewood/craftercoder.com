@@ -50,7 +50,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "jest",
-    "release": "./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=public"
+    "release": "npm run build && ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=public"
   },
   "repository": {
     "type": "git",

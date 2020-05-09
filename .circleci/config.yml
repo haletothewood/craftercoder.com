@@ -22,16 +22,6 @@ save_repo: &save_repo
     paths:
       - *working_directory
 
-build: &build
-  <<: *node_config
-  steps:
-    - *restore_repo
-    - attach_workspace:
-        at: *working_directory
-    - run:
-        name: Build
-        command: npm run build
-
 jobs:
   before_script:
     <<: *node_config
@@ -57,9 +47,11 @@ jobs:
   release:
     <<: *node_config
     steps:
-      - *build
+      - *restore_repo
+      - attach_workspace:
+          at: *working_directory
       - run:
-          name: Netlify Deploy
+          name: Release
           command: npm run release
 
 workflows:
