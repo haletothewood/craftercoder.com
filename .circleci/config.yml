@@ -44,12 +44,11 @@ test: &test
         command: npm test
 
 jobs:
-  jobs:
-    before_script:
-      <<: *before_script
+  before_script:
+    <<: *before_script
 
-    test:
-      <<: *test
+  test:
+    <<: *test
 
 workflows:
   version: 2
