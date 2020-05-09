@@ -36,9 +36,9 @@ before_script: &before_script
 test: &test
   <<: *node_config
   steps:
-    - *restore_repo
     - attach_workspace:
         at: *working_directory
+    - *restore_repo
     - run:
         name: Test
         command: npm test
