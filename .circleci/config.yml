@@ -43,10 +43,8 @@ test: &test
         name: Test
         command: npm test
 
-
 build: &build
   <<: *node_config
-  working_directory: ~/repo
   steps:
     - *restore_repo
     - attach_workspace:
@@ -58,13 +56,10 @@ build: &build
 release: &release
   <<: *node_config
   steps:
-    - *restore_repo
-    - attach_workspace:
-        at: *working_directory
     - *build
     - run:
         name: Netlify Deploy
-        command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=public
+        command: npm run release
 
 jobs:
   before_script:
@@ -89,5 +84,4 @@ workflows:
             - test
           filters:
             branches:
-              only:
-                - master
+              only: master
