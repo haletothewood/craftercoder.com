@@ -57,6 +57,15 @@ export const AboutPage = () => (
           </a>{" "}
           - Tools to help you master tough subjects
         </li>
+        <li>
+          <a
+            className="resource-item"
+            href="https://www.exercism.io"
+          >
+            Exercism
+          </a>{" "}
+          - Code practice and mentorship
+        </li>
       </ul>
     </div>
   </>
