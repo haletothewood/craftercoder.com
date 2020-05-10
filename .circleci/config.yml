@@ -44,15 +44,15 @@ jobs:
           name: Test
           command: npm test
 
-  release:
+  maybe_release:
     <<: *node_config
     steps:
       - *restore_repo
       - attach_workspace:
           at: *working_directory
       - run:
-          name: Release
-          command: npm run release
+          name: Release if code changed
+          command: .circleci/commit_check.sh
 
 workflows:
   version: 2
@@ -62,7 +62,7 @@ workflows:
       - test:
           requires:
             - before_script
-      - release:
+      - maybe_release:
           requires:
             - test
           filters:
