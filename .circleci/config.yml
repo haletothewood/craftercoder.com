@@ -52,7 +52,7 @@ jobs:
           at: *working_directory
       - run:
           name: Release if code changed
-          command: .circleci/commit_check.sh
+          command: bash .circleci/commit_check.sh
 
 workflows:
   version: 2
