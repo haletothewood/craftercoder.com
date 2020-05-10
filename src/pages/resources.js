@@ -66,6 +66,15 @@ export const AboutPage = () => (
           </a>{" "}
           - Code practice and mentorship
         </li>
+        <li>
+          <a
+            className="resource-item"
+            href="http://codekata.com/"
+          >
+            Code Kata
+          </a>{" "}
+          - A collection of 45-60 min katas to hone your skills
+        </li>
       </ul>
     </div>
   </>
