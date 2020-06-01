@@ -32,7 +32,7 @@
     "react-share": "^3.0.0"
   },
   "devDependencies": {
-    "babel-jest": "^24.8.0",
+    "babel-jest": "^26.0.1",
     "babel-preset-gatsby": "^0.2.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
